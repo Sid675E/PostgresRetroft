@@ -14,8 +14,9 @@
         android:layout_width="wrap_content"
         android:id="@+id/sid_id"
         android:paddingBottom="10dp"
+        android:textSize="22sp"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+         />
     <TextView
         android:layout_width="match_parent"
         android:id="@+id/sid_tt"
@@ -27,10 +28,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingBottom="10dp"
+        android:textSize="12sp"
         android:id="@+id/sid_var"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingBottom="10dp"
+        android:textSize="14sp"
         android:id="@+id/sid_edi"/>
 </LinearLayout>

@@ -1,6 +1,6 @@
 package com.raza.ahmed.postgresretroft.retrofit;
 
-import com.raza.ahmed.postgresretroft.CustomViewHolder;
+import com.raza.ahmed.postgresretroft.CustomViewResponse;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
@@ -11,6 +11,6 @@ import retrofit2.http.GET;
 public interface ApiInterface {
 
     @GET("rest/")
-    Call<CustomViewHolder> getJsonFromSid();
+    Call<CustomViewResponse> getJsonFromSid();
 
 }
