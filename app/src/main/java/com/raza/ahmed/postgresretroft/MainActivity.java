@@ -27,19 +27,19 @@ public class MainActivity extends AppCompatActivity {
         final RecyclerView recyclerView = (RecyclerView) findViewById(R.id.sid_recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         ApiInterface apiService = ApiClient.getClient().create(ApiInterface.class);
-        Call<CustomViewHolder> call = apiService.getJsonFromSid();
-        call.enqueue(new Callback<CustomViewHolder>() {
+        Call<CustomViewResponse> call = apiService.getJsonFromSid();
+        call.enqueue(new Callback<CustomViewResponse>() {
             @Override
-            public void onResponse(Call<CustomViewHolder> call, Response<CustomViewHolder> response) {
+            public void onResponse(Call<CustomViewResponse> call, Response<CustomViewResponse> response) {
 
-                List<CustomViewHolder> customViewHolders ;
+                List<CustomViewHolder> customViewHolders = response.body().getResults();
 
                 recyclerView.setAdapter(new AdapterSid(customViewHolders, R.layout.list_item_sid, getApplicationContext()));
 
             }
 
             @Override
-            public void onFailure(Call<CustomViewHolder> call, Throwable t) {
+            public void onFailure(Call<CustomViewResponse> call, Throwable t) {
                 Log.e(TAG, t.toString());
             }
         });
