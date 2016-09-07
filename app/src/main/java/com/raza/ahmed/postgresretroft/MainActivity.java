@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         call.enqueue(new Callback<CustomViewResponse>() {
             @Override
             public void onResponse(Call<CustomViewResponse> call, Response<CustomViewResponse> response) {
-
+                int statuscode = response.code();
                 List<CustomViewHolder> customViewHolders = response.body().getResults();
 
                 recyclerView.setAdapter(new AdapterSid(customViewHolders, R.layout.list_item_sid, getApplicationContext()));

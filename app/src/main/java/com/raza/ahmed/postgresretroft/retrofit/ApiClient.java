@@ -8,7 +8,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
  */
 public class ApiClient {
 
-    public static final String BASR_URL = "http://192.143.1.0/";
+    public static final String BASR_URL = "http://127.0.0.1:8000/";
 
     public static Retrofit retrofit = null;
 

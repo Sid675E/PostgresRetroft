@@ -10,7 +10,7 @@ import retrofit2.http.GET;
  */
 public interface ApiInterface {
 
-    @GET("rest/")
+    @GET("rest")
     Call<CustomViewResponse> getJsonFromSid();
 
 }
