@@ -51,10 +51,10 @@ public class AdapterSid extends RecyclerView.Adapter<AdapterSid.AdapterSidViewHo
 
     @Override
     public void onBindViewHolder(AdapterSidViewHolder holder, final int position){
-        holder.sidId.setText(Integer.toString( sidView.get(position).getid()));
+        holder.sidId.setText(String.valueOf( sidView.get(position).getid()));
         holder.sidEdi.setText(sidView.get(position).getedi());
         holder.sidTt.setText(sidView.get(position).gettt());
-        holder.sidVar.setText(Integer.toString(sidView.get(position).getvarr()));
+        holder.sidVar.setText(String.valueOf(sidView.get(position).getvarr()));
     }
 
     @Override
