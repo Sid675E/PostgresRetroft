@@ -32,7 +32,7 @@ public class CustomViewHolder {
         this.id = id;
     }
 
-    public int getid(){
+    public Integer getid(){
         return id;
     }
     public void setid(){
